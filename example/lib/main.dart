@@ -41,10 +41,12 @@ class _MyAppState extends State<MyApp> {
         Locale('ja'),
         Locale('ar'),
         Locale('fa'),
-        Locale("es"),
+        Locale('es'),
       ],
-      theme: ThemeData(
-          primarySwatch: Colors.indigo, accentColor: Colors.pinkAccent),
+      theme: ThemeData().copyWith(
+        colorScheme:
+            ThemeData().colorScheme.copyWith(secondary: Colors.pinkAccent),
+      ),
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Month Picker Example App'),

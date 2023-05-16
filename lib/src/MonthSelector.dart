@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:month_picker_dialog/src/common.dart';
@@ -81,10 +80,10 @@ class MonthSelectorState extends State<MonthSelector> {
         style: TextStyle(
           color: date.month == widget.selectedDate!.month &&
                   date.year == widget.selectedDate!.year
-              ? Theme.of(context).accentTextTheme.button!.color
+              ? Theme.of(context).textTheme.button!.color
               : date.month == DateTime.now().month &&
                       date.year == DateTime.now().year
-                  ? Theme.of(context).colorScheme.secondary
+                  ? Theme.of(context).colorScheme.onSecondary
                   : null,
         ),
       ),
